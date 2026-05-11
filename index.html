@@ -344,6 +344,117 @@
   font-size: 2.4rem;
   margin-bottom: 12px;
 }
+
+.activities {
+  position: relative;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.activities::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(255,243,223,0.92),
+    rgba(255,243,223,0.94)),
+    url("Wassersport.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+}
+
+.activities .container {
+  position: relative;
+  z-index: 2;
+}
+
+.activities-kicker {
+  text-align: center;
+  color: var(--accent);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.activities-heading {
+  text-align: center;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.activities-subtitle {
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-bottom: 48px;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.activity-card {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(6px);
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+
+  border: 1px solid rgba(80,48,20,0.10);
+}
+
+.activity-image {
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+}
+
+.activity-content {
+  padding: 24px;
+}
+
+.activity-content h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+}
+
+.activity-content ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.activity-content li {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+@media (max-width: 1100px) {
+
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
     .location {
       background: rgba(255,255,255,0.18);
     }
@@ -543,6 +654,7 @@
   <a href="#ueber-uns">Über uns</a>
   <a href="#standort">Standort</a>
   <a href="#campingplatz">Campingplatz</a>
+  <a href="#aktivitaeten">Aktivitäten</a>	
   <a href="#kontakt">Kontakt</a>
 </nav>
     </div>
@@ -655,6 +767,120 @@
   </div>
 
 </section>
+
+<section class="activities" id="aktivitaeten">
+
+  <div class="container">
+
+    <div class="activities-kicker">
+      Aktivitäten
+    </div>
+
+    <h2 class="activities-heading">
+      Entdecken, erleben, genießen
+    </h2>
+
+    <p class="activities-subtitle">
+      Rund um Ketzür gibt es viel zu erleben – in der Natur, am Wasser und in den schönen Dörfern der Umgebung.
+    </p>
+
+    <div class="activities-grid">
+
+      <div class="activity-card">
+
+        <div class="activity-image"
+        style='background-image:url("Wanderweg.jpeg");'>
+        </div>
+
+        <div class="activity-content">
+
+          <h3>🚴 Fahrradtouren & Wanderwege</h3>
+
+          <ul>
+            <li>Storchenwanderweg direkt am Campingplatz</li>
+            <li>Radtouren nach Brandenburg an der Havel</li>
+            <li>längere Touren Richtung Potsdam möglich</li>
+            <li>schöne Strecken entlang der Havel & Seen</li>
+            <li>ruhige Naturwege durch Dörfer und Wälder</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="activity-card">
+
+        <div class="activity-image"
+        style='background-image:url("Wassersport.jpeg");'>
+        </div>
+
+        <div class="activity-content">
+
+          <h3>🌊 Wassersport & Baden</h3>
+
+          <ul>
+            <li>Badestrand direkt am Campingplatz</li>
+            <li>sämtliche Wassersportmöglichkeiten in Bollmannsruh</li>
+            <li>Angeln & entspannte Badetage</li>
+            <li>Potsdamer & Brandenburger Havelseen</li>
+            <li>große Wasserlandschaft</li>
+            <li>ideal für Wasserwanderungen</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="activity-card">
+
+        <div class="activity-image"
+        style='background-image:url("Wald.jpeg");'>
+        </div>
+
+        <div class="activity-content">
+
+          <h3>🌲 Natur & Erholung</h3>
+
+          <ul>
+            <li>Wälder & Spazierwege direkt um Ketzür</li>
+            <li>Pilze sammeln im Herbst</li>
+            <li>Vogelbeobachtung & Naturfotografie</li>
+            <li>Sonnenuntergänge am Beetzsee</li>
+            <li>Ruhe & Natur fern vom Stadtlärm</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="activity-card">
+
+        <div class="activity-image"
+        style='background-image:url("Mühle.jpg");'>
+        </div>
+
+        <div class="activity-content">
+
+          <h3>⛪ Sehenswürdigkeiten & Dörfer</h3>
+
+          <ul>
+            <li>Bockwindmühle Ketzür</li>
+            <li>historische Dorfkirchen</li>
+            <li>kleine märkische Dörfer entdecken</li>
+            <li>Brandenburg an der Havel als Ausflugsziel</li>
+            <li>schöne Cafés und Restaurants finden sich in der Umgebung</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="contact" id="kontakt">
   <div class="container">
     <div class="sun">☀</div>
