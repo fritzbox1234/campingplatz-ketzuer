@@ -21,7 +21,10 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
 
     body {
       margin: 0;
@@ -171,11 +174,11 @@
     }
 
     .split {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 52px;
-      align-items: center;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
 
     .image-card {
   min-height: 360px;
@@ -458,11 +461,11 @@
       </a>
 
       <nav class="menu">
-        <a href="#ueber-uns">Über uns</a>
-        <a href="#fuer-wen">Für wen</a>
-        <a href="#standort">Standort</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
+  <a href="#ueber-uns">Über uns</a>
+  <a href="#standort">Standort</a>
+  <a href="#fuer-wen">Für wen</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
     </div>
   </header>
 
@@ -499,7 +502,33 @@
       </div>
     </section>
 
-    <section class="for-who" id="fuer-wen">
+    
+
+   
+    <section class="location" id="standort">
+      <div class="container split">
+        <div class="map-card">
+          <iframe
+            src="https://www.google.com/maps?q=Ketz%C3%BCrer%20Dorfstra%C3%9Fe%2024%2C%2014778%20Beetzseeheide&hl=de&z=14&output=embed"
+            loading="lazy"
+            allowfullscreen="">
+          </iframe>
+	</div>
+<div>
+          <div class="section-kicker">Standort</div>
+          <h2>Idyllisch gelegen<br>am Beetzsee</h2>
+          <p>
+            Der Campingplatz befindet sich in Ketzür, direkt am Badestrand und am Storchenwanderweg.
+            Ideal für Rad- und Wanderausflüge am Beetzsee entlang und durch das Brandenburger Land.
+          </p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Ketzürer+Dorfstraße+24+14778+Beetzseeheide" target="_blank" rel="noopener noreferrer">
+            📍 Zum Standort
+          </a>
+        </div>
+      </div>
+    </section>
+
+<section class="for-who" id="fuer-wen">
       <div class="for-who-grid">
         <div class="for-who-image"></div>
 
@@ -525,55 +554,6 @@
               <div>Für Familien, Paare und Freunde</div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="container">
-        <div class="section-kicker">Was dich erwartet</div>
-
-        <div class="feature-grid">
-          <div class="feature-card">
-            <span>🌊</span>
-            Direkt am Badestrand
-          </div>
-          <div class="feature-card">
-            <span>🪶</span>
-            Am Storchenwanderweg
-          </div>
-          <div class="feature-card">
-            <span>🚿</span>
-            Neuer Sanitärbereich
-          </div>
-          <div class="feature-card">
-            <span>🔥</span>
-            Grill- & Feuerfläche
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="location" id="standort">
-      <div class="container split">
-        <div>
-          <div class="section-kicker">Standort</div>
-          <h2>Idyllisch gelegen<br>am Beetzsee</h2>
-          <p>
-            Der Campingplatz befindet sich in Ketzür, direkt am Badestrand und am Storchenwanderweg.
-            Ideal für Rad- und Wanderausflüge am Beetzsee entlang und durch das Brandenburger Land.
-          </p>
-          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Ketzürer+Dorfstraße+24+14778+Beetzseeheide" target="_blank" rel="noopener noreferrer">
-            📍 Zum Standort
-          </a>
-        </div>
-
-        <div class="map-card">
-          <iframe
-            src="https://www.google.com/maps?q=Ketz%C3%BCrer%20Dorfstra%C3%9Fe%2024%2C%2014778%20Beetzseeheide&hl=de&z=14&output=embed"
-            loading="lazy"
-            allowfullscreen="">
-          </iframe>
         </div>
       </div>
     </section>
