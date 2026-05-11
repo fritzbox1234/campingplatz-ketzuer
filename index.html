@@ -235,36 +235,115 @@
     }
 
     .features {
-      text-align: center;
-    }
+  padding: 80px 0;
+}
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 28px;
-    }
+.camping-title {
+  text-align: left;
+  margin-bottom: 10px;
+}
 
-    .feature-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px 18px;
-      font-weight: 800;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 12px 28px rgba(75, 42, 12, 0.08);
-    }
+.camping-heading {
+  text-align: left;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  max-width: none;
+  margin-bottom: 34px;
+  white-space: nowrap;
+}
 
-    .feature-card span {
-      color: var(--accent);
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
+.feature-card {
+  background: rgba(255,255,255,0.42);
+  border: 1px solid rgba(80,48,20,0.12);
+  border-radius: 20px;
+  padding: 24px 18px;
+  min-height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  font-weight: 800;
+  font-size: 1rem;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.feature-card span {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+}
+
+.gaststaette-info {
+  margin-top: 42px;
+
+  background:
+    linear-gradient(180deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.04));
+
+  border: 2px solid rgba(201,111,24,0.35);
+
+  border-radius: 24px;
+
+  padding: 42px 30px;
+
+  text-align: center;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.gast-icon {
+  font-size: 3.5rem;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1100px) {
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 220px;
+  }
+
+}
+.gaststaette-info {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(201, 111, 24, 0.12);
+  border: 2px solid rgba(201, 111, 24, 0.28);
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.6;
+  box-shadow: 0 12px 30px rgba(70, 40, 14, 0.08);
+}
+
+.gaststaette-info span {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
     .location {
       background: rgba(255,255,255,0.18);
     }
@@ -463,7 +542,7 @@
       <nav class="menu">
   <a href="#ueber-uns">Über uns</a>
   <a href="#standort">Standort</a>
-  <a href="#fuer-wen">Für wen</a>
+  <a href="#campingplatz">Campingplatz</a>
   <a href="#kontakt">Kontakt</a>
 </nav>
     </div>
@@ -527,51 +606,69 @@
         </div>
       </div>
     </section>
+<section class="features">
 
-<section class="for-who" id="fuer-wen">
-      <div class="for-who-grid">
-        <div class="for-who-image"></div>
+  <div class="container">
 
-        <div class="for-who-text">
-          <div class="section-kicker">Für wen</div>
-          <h2>Für alle, die Ruhe und Naturausgleich suchen</h2>
+    <div class="section-kicker camping-title">
+      CAMPINGPLATZ
+    </div>
 
-          <div class="target-list">
-            <div class="target-item">
-              <div class="target-icon">⛺</div>
-              <div>Für Zelter und Naturfreunde</div>
-            </div>
-            <div class="target-item">
-              <div class="target-icon">🚐</div>
-              <div>Für Wohnmobilisten und Wohnwagenfreunde</div>
-            </div>
-            <div class="target-item">
-              <div class="target-icon">🚲</div>
-              <div>Für Wanderer, Radfahrer und Entdecker</div>
-            </div>
-            <div class="target-item">
-              <div class="target-icon">👨‍👩‍👧‍👦</div>
-              <div>Für Familien, Paare und Freunde</div>
-            </div>
-          </div>
-        </div>
+    <h2 class="camping-heading">
+      Alles für entspannte Tage
+    </h2>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <span>🔥</span>
+        Feuerstelle & Grillplatz
       </div>
-    </section>
 
-    <section class="contact" id="kontakt">
-      <div class="container">
-        <div class="sun">☀</div>
-        <h2>Kontakt</h2>
-        <p>
-          Du hast Fragen oder möchtest Kontakt aufnehmen?<br>
-          Schreib uns einfach eine E-Mail – wir freuen uns auf dich.
-        </p>
-
-        <a class="email-link" href="mailto:campingplatzketzuer@outlook.de">
-          ✉ campingplatzketzuer@outlook.de
-        </a>
+      <div class="feature-card">
+        <span>🪑</span>
+        Sitzmöglichkeiten & Aufenthaltsbereich
       </div>
-    </section>
+
+      <div class="feature-card">
+        <span>🚿</span>
+        Moderne Sanitäranlagen
+      </div>
+
+      <div class="feature-card">
+        <span>⛺</span>
+        Stellplätze für Zelte,
+        Wohnmobile & Wohnwagen
+      </div>
+
+    </div>
+
+    <div class="gaststaette-info">
+      <div class="gast-icon">🍺</div>
+
+      <div>
+        Leider fehlt für die Gaststätte direkt am Strand aktuell noch ein Pächter.<br>
+        Bei Interesse freuen wir uns über eine Kontaktaufnahme.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="contact" id="kontakt">
+  <div class="container">
+    <div class="sun">☀</div>
+    <h2>Kontakt</h2>
+    <p>
+      Du hast Fragen oder möchtest Kontakt aufnehmen?<br>
+      Schreib uns einfach eine E-Mail – wir freuen uns auf dich.
+    </p>
+
+    <a class="email-link" href="mailto:campingplatzketzuer@outlook.de">
+      ✉ campingplatzketzuer@outlook.de
+    </a>
+  </div>
+</section>
   </main>
 
   <footer>
