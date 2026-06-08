@@ -311,6 +311,7 @@
 
   .feature-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
 }
@@ -318,14 +319,24 @@
 @media (max-width: 700px) {
 
   .feature-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .feature-card {
-    min-height: 220px;
+    min-height: 140px;
+    padding: 16px 8px;
+    font-size: 0.82rem;
+    border-radius: 16px;
+  }
+
+  .feature-card span {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
   }
 
 }
+
 .gaststaette-info {
   margin-top: 28px;
   padding: 28px;
@@ -608,26 +619,25 @@
     }
 
     @media (max-width: 900px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 14px 0;
-      }
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 0;
+  }
 
-      .split,
-      .for-who-grid,
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
+  .split,
+  .for-who-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .for-who-text {
-        padding: 36px 24px;
-      }
+  .for-who-text {
+    padding: 36px 24px;
+  }
 
-      .hero {
-        min-height: 560px;
-      }
-    }
+  .hero {
+    min-height: 560px;
+  }
+}
 
     @media (max-width: 560px) {
       .menu {
@@ -765,8 +775,26 @@
         Wohnmobile & Wohnwagen
       </div>
 
-    </div>
+<div class="feature-card">
+  <span>⚡</span>
+  Stromanschluss vorhanden
+</div>
 
+<div class="feature-card">
+  <span>📵</span>
+  Kein WLAN
+</div>
+
+<div class="feature-card">
+  <span>🛶</span>
+  SUP und Kanu am Platz ausleihbar
+</div>
+
+<div class="feature-card">
+  <span>📺</span>
+  Schlechtes TV-Signal
+</div>
+</div>
     <div class="gaststaette-info">
       <div class="gast-icon">🍺</div>
 
@@ -776,7 +804,7 @@
       </div>
     </div>
 
-  </div>
+ 
 
 </section>
 
